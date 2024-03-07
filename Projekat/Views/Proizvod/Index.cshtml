@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+@using Projekat.Models
+@model Proizvod
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+
+    <h1>Dodaj proizvod</h1>
+    @if (TempData["proizvodPostoji"] != null)
+    {
+        <div class="kontejner-greska-login"><div>@TempData["proizvodPostoji"]</div></div>
+    }
+<div class="kontejner">
+    <form action="~/Proizvod/DodajProizvod" method="post" enctype="multipart/form-data" class="kontejner-forma-login">
+        <div class="forma-login-inputs">
+            <label>Id:</label>
+            <input type="number" name="id" />
+
+            <label>Naziv:</label>
+            <input type="text" name="naziv" />
+
+            <label>Cena:</label>
+            <input type="number" name="cena" />
+
+            <label>Kolicina:</label>
+            <input type="number" name="kolicina" />
+
+            <label>Opis:</label>
+            <input type="text" name="opis" />
+
+            <label>Slika:</label>
+            <input type="file" name="slika" value="Izaberi sliku" required />
+
+            <label hidden>Datum:</label>
+            <input type="date" name="datumPostavljanja" hidden />
+
+            <label>Grad</label>
+            <input type="text" name="grad" />
+
+            <div hidden>
+                <label>Dostupan</label>
+                <input type="checkbox" name="dostupan" value="True" />
+            </div>
+            
+
+            <input type="submit" value="Dodaj" />
+            </div>
+    </form>
+    </div>
+
+</body>
+</html>

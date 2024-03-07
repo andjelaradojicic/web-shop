@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+@using Projekat.Models
+@model Recenzija
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+
+<body>
+    <div class="navigacija">
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+<div class="recenzija-kontejner">
+    <div class="recenzija-proizvod">
+        <img src="~/Images/@Model.Proizvod.PutanjaDoSlike" />
+
+        <div class="recenizija-proizvod-tekst">
+            <p><b>Proizvod: </b>@Model.Proizvod.Naziv</p>
+            <p><b>Cena: </b>@Model.Proizvod.Cena</p>
+            <p><b>Lokacija: </b>@Model.Proizvod.Grad</p>
+            @if (Model.Proizvod.Dostupan)
+            {
+            <p><b>Dostupan: </b>da</p>
+            }
+            else
+            {
+            <p><b>Dostupan: </b>ne</p>
+            }
+        </div>
+    </div>
+
+    <h1>Izmeni recenziju</h1>
+        
+
+    <form action="/Recenzija/IzmenaRecenzije" method="post" enctype="multipart/form-data">
+        <div class="recenzija-forma">
+            <input type="number" value="@Model.Proizvod.Id" hidden name="id" />
+            <input type="text" value="@Model.Recezent.KorisnickoIme" hidden name="korisnickoIme" />
+
+            <label>Naslov:</label>
+            <input type="text" name="naslov" value="@Model.Naslov" required />
+
+            <label>Sadrzaj:</label>
+            <input type="text" name="sadrzaj" value="@Model.Sadrzaj" required />
+
+            <label>Dodaj sliku</label>
+            <input type="file" name="slika" />
+
+            <input type="submit" value="Sacuvaj izmene" />
+        </div>
+    </form>
+        
+   
+
+    </div>
+          }
+
+
+    </body>
+</html>

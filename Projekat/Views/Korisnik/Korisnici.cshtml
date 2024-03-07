@@ -1,0 +1,190 @@
+﻿@{
+    Layout = null;
+
+
+    string defaultOdDatum = "1900-01-01";
+    string defaultDoDatum = DateTime.Now.ToString("yyyy-MM-dd");
+
+}
+
+
+@using Projekat.Models
+@model  IEnumerable<Korisnik>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+
+    @if (Model != null)
+    {
+
+
+        <div class="filter-form-div">
+
+            <form action="/Korisnik/Pretraga" class="filter">
+
+                <div>
+                    <p>Ime</p>
+                    <input type="text" name="pretragaIme" class="admin-filter" />
+                </div>
+                <div>
+                    <p>Prezime</p>
+                    <input type="text" name="pretragaPrezime" class="admin-filter" />
+                </div>
+
+                <div>
+                    <p>Datum rodjenja</p>
+                    <input type="date" name="pretragaOdDatuma" value="@defaultOdDatum" class="admin-filter" />
+                    <input type="date" name="pretragaDoDatuma" value="@defaultDoDatum" />
+                </div>
+                <div>
+                    <p>Uloga</p>
+
+                    <select name="pretragaUloga" class="admin-select">
+                        <option value="@Uloga.Administrator">Svi Korisnici</option>
+                        <option>Kupac</option>
+                        <option>Prodavac</option>
+                    </select>
+                </div>
+                <div class="filter-submit admin-filter-btn">
+                    <input type="submit" value="Pretrazi">
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="proizvodi-kontejner">
+            <div class="sortiranje">
+                <h4>Soritranje</h4>
+
+                <div>
+                    <p>Sortiranje po imenu</p>
+                    <form action="/Korisnik/SortirajPoImenu" class="sortiranje-forma">
+                        <div style="display: flex; align-items: center">
+                            <label>Opadajuce</label>
+                            <input type="radio" name="sortiranjePoImenu" value="opadajuce" />
+
+                            <label>Rastuce</label>
+                            <input type="radio" name="sortiranjePoImenu" value="rastuce" />
+                        </div>
+
+                        <input type="submit" value="Sortiraj" />
+
+                    </form>
+                </div>
+                <div>
+                    <p>Sortiranje po datumu rodjenja</p>
+                    <form action="/Korisnik/SortirajPoDatumuRodjenja" class="sortiranje-forma">
+                        <div style="display: flex; align-items: center">
+                            <label>Opadajuce</label>
+                            <input type="radio" name="sortiranjePoDatumu" value="opadajuce" />
+
+                            <label>Rastuce</label>
+                            <input type="radio" name="sortiranjePoDatumu" value="rastuce" />
+                        </div>
+                        <input type="submit" value="Sortiraj" />
+
+
+                    </form>
+                </div>
+                <div>
+                    <p>Sortiranje po ulozi</p>
+                    <form action="/Korisnik/SortirajPoUlozi" class="sortiranje-forma">
+                        <div style="display: flex; align-items: center">
+                            <label>Opadajuce</label>
+                            <input type="radio" name="sortiranjePoUlozi" value="opadajuce" />
+
+                            <label>Rastuce</label>
+                            <input type="radio" name="sortiranjePoUlozi" value="rastuce" />
+                        </div>
+
+                        <input type="submit" value="Sortiraj" />
+
+                    </form>
+                </div>
+            </div>
+            <div class="proizvodi">
+                <table class="admin-korisnik-tabela">
+                    <tr>
+                        <th><label>Korisnicko ime</label></th>
+                        <th><label>Lozinka</label></th>
+                        <th><label>Ime</label></th>
+                        <th><label>Prezime</label></th>
+                        <th><label>Pol</label></th>
+                        <th><label>Datum rodjenja</label></th>
+                        <th><label>Uloga</label></th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.KorisnickoIme</td>
+                            <td>@item.Lozinka</td>
+                            <td>@item.Ime</td>
+                            <td>@item.Prezime</td>
+                            <td>@item.Pol</td>
+                            <td>@item.DatumRodjenja.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Uloga.ToString()</td>
+
+                            <td>
+                                <form action="~/Korisnik/Pregled">
+                                    <input type="text" value="@item.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="submit" value="Prikazi" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="~/Korisnik/IzmenaProfila">
+                                    <input type="text" value="@item.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="submit" value="Izmeni" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="~/Korisnik/ObrisiKorisnika">
+                                    <input type="text" value="@item.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="submit" value="Obrisi" />
+                                </form>
+                            </td>
+
+                        </tr>
+
+                    }
+                </table>
+            </div>
+        </div>
+
+        <div class="greske">
+            @if (TempData["izmenaKorisnika"] != null)
+            {
+                <div class="kontejner-greska"><div style="background-color: #7ced6d">@TempData["izmenaKorisnika"]</div></div>
+            }
+            @if (TempData["nemaKorisnika"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["nemaKorisnika"]</div></div>
+            }
+            
+        </div>
+
+
+    }
+</body>
+</html>

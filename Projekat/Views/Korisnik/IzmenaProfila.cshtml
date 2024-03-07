@@ -1,0 +1,156 @@
+﻿@{
+Layout = null;
+}
+
+
+@using Projekat.Models
+@model  Korisnik
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+    <h4>Izmeni profil:</h4>
+    <div>
+        @if (TempData["greskaIzmena"] != null)
+        {
+            <p>@TempData["greskaIzmena"]</p>
+        }
+
+    </div>
+    @if (Model != null)
+    {
+        <div>
+            <form action="~/Korisnik/Izmena" method="post" class="forma-login-inputs" style="width:400px;">
+
+                      <label>Korisnicko ime:</label>
+                     <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" readonly/>
+                  
+                        <label>Lozinka:</label>
+                       <input type="password" name="lozinka" value="@Model.Lozinka" required />
+                    
+                        <label>Ime:</label>
+                        <input type="text" name="ime" value="@Model.Ime" required />
+                    
+                      <label>Prezime:</label>
+                      <input type="text" name="prezime" value="@Model.Prezime" required />
+                
+                      <label>Pol:</label>
+                      
+                            <select name="pol" >
+                                @switch (Model.Pol)
+                                {
+                                    case Pol.Muski:
+                                        <option selected>Muski</option>
+                                        <option>Zenski</option>
+                                        break;
+                                    case Pol.Zenski:
+                                        <option>Muski</option>
+                                        <option selected>Zenski</option>
+                                        break;
+                                }
+
+                            </select>
+                    
+                        
+                            <label>Email:</label>
+                      
+                    <input type="email" name="email" value="@Model.Email" />
+                
+                        @{
+                            string godina = Model.DatumRodjenja.Year.ToString();
+                            string mesec = Model.DatumRodjenja.Month.ToString().PadLeft(2, '0');
+                            string dan = Model.DatumRodjenja.Day.ToString().PadLeft(2, '0');
+                            string datum = $"{godina}-{mesec}-{dan}";
+                        }
+                       <label>Datum rodjenja:</label>
+                      <input type="date" name="datumRodjenja" value="@datum" />
+                   
+
+            @if (ViewBag.Korisnik.Uloga == Uloga.Administrator)
+            {
+               
+                   <label>Uloga:</label>
+                    
+                        <select name="uloga">
+                            @switch (Model.Uloga)
+                            {
+                                case Uloga.Kupac:
+                                    {
+                                        <option selected>Kupac</option>
+                                        <option>Prodavac</option>
+                                        break;
+                                    }
+                                case Uloga.Prodavac:
+                                    {
+                                        <option> Kupac </option>
+                                        <option selected> Prodavac </option>
+                                        break;
+                                    }
+                                case Uloga.Administrator:
+                                    {
+                                        <option selected>Administrator</option>
+                                        break;
+                                    }
+                            }
+                        </select>
+                 
+            }
+            else
+            {
+               
+                    <label hidden>Uloga:</label>
+                    
+                        <select name="uloga" hidden>
+                            @switch (Model.Uloga)
+                            {
+                                case Uloga.Kupac:
+                                    {
+                                        <option selected>Kupac</option>
+                                        <option>Prodavac</option>
+                                        break;
+                                    }
+                                case Uloga.Prodavac:
+                                    {
+                                        <option> Kupac </option>
+                                        <option selected> Prodavac </option>
+                                        break;
+                                    }
+
+                                case Uloga.Administrator:
+                                    {
+                                        <option selected>Administrator</option>
+                                        break;
+                                    }
+                             }
+                        </select>
+               
+            }
+
+            
+                    <input type="submit" value="Sacuvaj izmene" />
+           
+    </form>
+</div>
+    }
+
+</body>
+</html>

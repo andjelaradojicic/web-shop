@@ -1,0 +1,207 @@
+﻿@{
+    Layout = null;
+}
+
+@using Projekat.Models
+@model  Proizvod
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    @if (ViewBag.Korisnik != null) //prijavljeni
+    {
+        <div class="navigacija">
+            <div class="navigacija-levo">
+                <form action="~/Home/Index">
+                    <input type="submit" value="Pocetna" />
+                </form>
+            </div>
+            <div class="navigacija-desno">
+                <form action="/Korisnik/Pregled">
+                    <input type="submit" value="Profil" />
+                </form>
+                <form action="/Prijava/Odjava">
+                    <input type="submit" value="Odjava" />
+                </form>
+            </div>
+        </div>
+
+        if (Model != null)
+        {
+            <div class="proizvodi-prikaz-kontejner">
+
+                <div class="proizvodi-prikaz-kartica">
+                    <img src="~/Images/@Model.PutanjaDoSlike" class="proizvod-detalji-img"/>
+                    <div class="proizvodi-prikaz-tekstKartice">
+                        <div class="proizvod-tekst-l">
+                            <p><b>Id: </b>@Model.Id</p>
+                            <p><b>Naziv: </b>@Model.Naziv</p>
+                            <p><b>Cena: </b> @Model.Cena</p>
+                        </div>
+                        <div class="proizvod-tekst-d">
+                            <p><b>Kolicina: </b>@Model.Kolicina</p>
+                            <p><b>Postavljen: </b>@Model.DatumPostavljanja.ToString("dd/MM/yyyy")</p>
+                            <p><b>Lokacija: </b> @Model.Grad</p>
+                        </div>
+                        @if (Model.Dostupan)
+                        {
+                            <p><b>Dostupan: </b>da</p>
+                        }
+                        else
+                        {
+                            <p><b>Dostupan: </b>ne</p>
+                        }
+                        <p style="flex-basis: 100%"><b>Opis:</b>@Model.Opis</p>
+                    </div>
+                </div>
+                <div class=proizvod-recenzije>
+
+                    <h1 style="color: #312F2F;">Recenzije</h1>
+                    @if (Model.ListaRecenzija.Count == 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        foreach (var r in Model.ListaRecenzija)
+                        {
+                            if (ViewBag.Korisnik.Uloga == Uloga.Kupac)
+                            {
+                                if (r.Odobrena && !r.Obrisana && r.Recezent != null)
+                                {
+                                    <div class="proizvod-recenzija-kartica">
+                                        <img src="~/Images/@r.PutanjaDoSlike" />
+                                        <div class="proizvod-recenzije-kartica-tekst">
+                                            <p><b>Naslov: </b>@r.Naslov</p>
+                                            <p><b>Sadrzaj: </b>@r.Sadrzaj</p>
+                                            <p><b>Recezent: </b> @r.Recezent.Ime @r.Recezent.Prezime</p>
+                                        </div>
+                                        @if (r.Recezent.KorisnickoIme == ViewBag.Korisnik.KorisnickoIme)
+                                        {
+                                            <div class="proizvod-korisnik-opcije">
+                                                <form action="/Recenzija/Izmena">
+                                                    <input type="number" name="id" value="@r.Proizvod.Id" hidden />
+                                                    <input type="text" name="korisnickoIme" value="@r.Recezent.KorisnickoIme" hidden />
+                                                    <input type="submit" value="Izmeni recenziju" />
+                                                </form>
+                                                <form action="/Recenzija/Obrisi">
+                                                    <input type="number" name="id" value="@r.Proizvod.Id" hidden />
+                                                    <input type="text" name="korisnickoIme" value="@r.Recezent.KorisnickoIme" hidden />
+                                                    <input type="submit" value="Obrisi recenziju" />
+                                                </form>
+                                            </div>
+                                          }
+                                    </div>
+                    }
+                    }
+                    else if (ViewBag.Korisnik.Uloga == Uloga.Administrator)
+                    {
+                    if (!r.Obrisana && r.Recezent != null)
+                    {
+                    <div class="proizvod-recenzija-kartica">
+                        <img src="~/Images/@r.PutanjaDoSlike" />
+                        <div class="proizvod-recenzije-kartica-tekst">
+                            <p><b>Naslov: </b>@r.Naslov</p>
+                            <p><b>Sadrzaj: </b>@r.Sadrzaj</p>
+                            <p><b>Recezent: </b> @r.Recezent.Ime @r.Recezent.Prezime</p>
+                        </div>
+                        <div class="proizvod-korisnik-opcije">
+                            <form action="/Recenzija/OdobriRecenziju">
+                                <input type="number" name="id" value="@r.Proizvod.Id" hidden />
+                                <input type="text" name="korisnickoIme" value="@r.Recezent.KorisnickoIme" hidden />
+                                <input type="submit" value="Odobri recenziju" />
+                            </form>
+                            <form action="/Recenzija/OdbijRecenziju">
+                                <input type="number" name="id" value="@r.Proizvod.Id" hidden />
+                                <input type="text" name="korisnickoIme" value="@r.Recezent.KorisnickoIme" hidden />
+                                <input type="submit" value="Odbij recenziju" />
+                            </form>
+                        </div>
+                    </div>
+                    }
+                    }
+                    else
+                    {
+                    if (r.Odobrena && !r.Obrisana && r.Recezent != null)
+                    {
+                    <div class="proizvod-recenzija-kartica">
+                        <img src="~/Images/@r.PutanjaDoSlike" />
+                        <div class="proizvod-recenzije-kartica-tekst">
+                            <p><b>Naslov: </b>@r.Naslov</p>
+                            <p><b>Sadrzaj: </b>@r.Sadrzaj</p>
+                            <p><b>Recezent: </b> @r.Recezent.Ime @r.Recezent.Prezime</p>
+                        </div>
+                    </div>
+                    }
+                    }
+                    }
+                    }
+
+                </div>
+            </div>
+        }
+    }
+    else //neprijavljeni
+    {
+        <div class="navigacija">
+            <div class="navigacija-levo">
+                <form action="~/Home/Index">
+                    <input type="submit" value="Pocetna" />
+                </form>
+            </div>
+            <div class="navigacija-desno">
+                <form action="/Prijava/Index">
+                    <input type="submit" value="Prijava" />
+                </form>
+                <form action="/Registracija/Index">
+                    <input type="submit" value="Registracija" />
+                </form>
+            </div>
+        </div>
+        if (Model != null)
+        {
+            <div class="proizvodi-prikaz-kontejner">
+
+                <div class="proizvodi-prikaz-kartica">
+                    <img src="~/Images/@Model.PutanjaDoSlike" />
+                    <div class="proizvodi-prikaz-tekstKartice">
+                        <div class="proizvod-tekst-l">
+                            <p><b>Id: </b>@Model.Id</p>
+                            <p><b>Naziv: </b>@Model.Naziv</p>
+                            <p><b>Cena: </b> @Model.Cena</p>
+                        </div>
+                        <div class="proizvod-tekst-d">
+                            <p><b>Kolicina: </b>@Model.Kolicina</p>
+                            <p><b>Postavljen: </b>@Model.DatumPostavljanja.ToString("dd/MM/yyyy")</p>
+                            <p><b>Lokacija: </b> @Model.Grad</p>
+                        </div>
+                        <p style="flex-basis: 100%"><b>Opis:</b>@Model.Opis</p>
+                    </div>
+                </div>
+                <div class=proizvod-recenzije>
+                    <h1 style="color: #312F2F;">Recenzije</h1>
+                    @foreach (var r in Model.ListaRecenzija)
+                    {
+                        if (r.Odobrena &&  !r.Obrisana && r.Recezent != null)
+                        {
+                            <div class="proizvod-recenzija-kartica">
+                                <img src="~/Images/@r.PutanjaDoSlike" />
+                                <div class="proizvod-recenzije-kartica-tekst">
+                                    <p><b>Naslov: </b>@r.Naslov</p>
+                                    <p><b>Sadrzaj: </b>@r.Sadrzaj</p>
+                                    <p><b>Recezent: </b> @r.Recezent.Ime @r.Recezent.Prezime</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
+    }
+
+</body>
+</html>

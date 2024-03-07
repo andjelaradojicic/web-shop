@@ -1,0 +1,474 @@
+﻿
+input[type=submit] {
+    background-color: white;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+
+body{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #312F2F;
+}
+
+/*login*/
+
+.kontejner {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center
+}
+
+.kontejner-forma-login{
+    width: 250px;
+    height: max-content;
+}
+
+.forma-login-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.forma-login-inputs input[type=submit] {
+    background-color: white;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+    transition: .3s ease-in-out;
+}
+
+.forma-login-inputs input[type=submit]:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.forma-login-inputs input[type=text], input[type=password], input[type=email], input[type=number], input[type=date], select {
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.forma-login-inputs input[type=file] {
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 10px;
+    outline: none;
+
+}
+
+
+.forma-login-inputs label {
+    color: #312F2F;
+    margin-bottom: 3px;
+    
+}
+
+
+.kontejner-greska-login {
+    width: 98%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+}
+
+.kontejner-greska-login div {
+    background-color: #eb4b60;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*pocetna*/
+
+.proizvodi-kontejner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sortiranje {
+    flex-basis: 20%;
+}
+.sortiranje-forma {
+    margin-bottom: 20px;
+    color: #312F2F;
+}
+
+.sortiranje-forma h4 {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #312F2F;
+}
+
+.sortiranje-forma input[type=submit]{
+    margin-top: 7px;
+    width: 100px;
+    height: 25px;
+}
+
+.filter-form-div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.filter {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.filter-polja {
+    display: flex;
+    align-items: center;
+    flex-basis: 44%;
+}
+
+.filter-polja div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.filter-polja div input[type=text], input[type=number] {
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    height: 25px;
+    outline: none;
+}
+
+.filter-polja div p{
+    margin: 0;
+}
+
+.cena-od-do{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row !important;
+    align-items: center;
+    width: max-content;
+}
+
+.cena-od-do input[type=number] {
+    width: 45px;
+    margin-bottom: 0 !important;
+}
+.filter-submit {
+    flex-basis: 55%;
+}
+.filter-submit input[type=submit] {
+    width:  200px;
+}
+
+.navigacija {
+    position: sticky;
+    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.navigacija-desno {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-end
+}
+
+.navigacija-desno input[type=submit] {
+    width:130px;
+    margin-left: 10px;
+}
+
+.navigacija-levo input[type=submit] {
+    width: 130px;
+}
+
+.navigacija-levo {
+    flex-basis: 75%;
+    display: flex;
+}
+
+.kartica {
+   border: 1px solid cornflowerblue;
+
+   flex-basis: 20%;
+   padding: 5px;
+   margin: 5px;
+   transition: .3s ease-in-out;
+}
+
+.kartica:hover {
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+.kartica img{
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 200px;
+}
+
+.tekstKartice {
+    padding: 10px;
+}
+
+.tekstKartice p {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #312F2F;
+}
+
+.proizvodi {
+    flex-basis: 78%;
+    right: 0;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.greske {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    z-index: -1000;
+}
+.kontejner-greska {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: auto auto;
+}
+
+.kontejner-greska div {
+    background-color: #eb4b60;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*prikaz proizvoda*/
+
+.proizvodi-prikaz-kontejner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.proizvodi-prikaz-kartica {
+    display: flex; 
+    padding: 5px;
+    margin: 5px;
+    align-content: space-between;
+}
+.proizvodi-prikaz-kartica img {
+    display: flex;
+    flex-basis: 35%;
+    object-fit: contain;
+    object-position: center;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.proizvodi-prikaz-tekstKartice {
+    display: flex;
+    flex-basis: 60%;
+    padding: 5px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.proizvod-tekst-l {
+    flex-basis: 19%;
+}
+
+.proizvod-tekst-d {
+    flex-basis: 80%;
+}
+
+.proizvod-recenzije {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px;
+    flex-direction: row;
+}
+.proizvod-recenzija-kartica {
+    flex-basis: 100%;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    align-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.proizvod-recenzije img {
+    display: flex;
+    flex-basis: 10%;
+    object-fit: contain;
+    object-position: center;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.proizvod-recenzije-kartica-tekst {
+    display: flex;
+    flex-basis: 90%;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+}
+
+.proizvodi-prikaz-tekstKartice p {
+
+}
+
+
+.proizvod-korisnik-opcije {
+    padding-top: 5px;
+    width:150px;
+}
+
+.proizvod-korisnik-opcije form{
+    margin-bottom: 10px;
+}
+
+/*lista korisnika */
+
+.admin-korisnik-tabela{
+    width: 100%;
+}
+
+.admin-korisnik-tabela tr th{
+   text-align: left;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.admin-filter {
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    height: 23px;
+    outline: none;
+}
+
+.admin-select {
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    height: 27px;
+    outline: none;
+}
+
+.admin-filter-btn {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*pregled profila sve aaaa*/
+
+.kontejner-profil-pregled {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.podaci-korisnik {
+    flex-basis: 30%;
+}
+
+.podaci-korisnik table{
+    width: 300px;
+    height: 200px
+}
+
+.korisnik-tabela{
+    border-bottom: 1px solid cornflowerblue;
+}
+
+.opcije-korisnik {
+    flex-basis: 15%;
+}
+
+.opcije-korisnik div{
+    margin-bottom: 10px
+}
+
+/*recenzija*/
+
+.recenzija-kontejner{
+    display: flex;
+    flex-direction: column;
+
+}
+.recenzija-proizvod {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recenzija-proizvod img {
+    width:200px;
+    height:200px;
+    object-fit:contain;
+    object-position:center;
+    flex-basis: 30%;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+.recenizija-proizvod-tekst {
+    flex-basis: 59%;
+    padding:10px;
+}
+.recenzija-forma {
+    display: flex;
+    flex-direction:column;
+    width: 700px;
+}
+.recenzija-forma label {
+    margin-top: 5px;
+   margin-bottom:5px;
+}
+.recenzija-forma textarea{
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    height: 100px;
+    padding: 5px
+}
+.recenzija-forma input[type=text] {
+    border: 1px solid cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+
+.recenzija-forma input[type=submit] {
+    width:180px;
+    margin-top: 10px;
+}

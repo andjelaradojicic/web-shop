@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+}
+@using Projekat.Models
+@model  List<Porudzbina>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+        <div class="proizvodi">
+
+            @foreach (var item in Model)
+            {
+                <div class="kartica">
+                    <img src="~/Images/@item.Proizvod.PutanjaDoSlike" style="width:200px; height:200px" />
+                    <div class="tekstKartice">
+                        <p><b>Naziv: </b>@item.Proizvod.Naziv</p>
+                        <p><b>Cena: </b>@item.Proizvod.Cena</p>
+                        @*<p><b>Kolicina: </b>@item.Kolicina</p>*@
+                        <p><b>Lokacija: </b>@item.Proizvod.Grad</p>
+                        <p><b>Kupac: </b>@item.Kupac.Ime @item.Kupac.Prezime</p>
+                        <p><b>Poruceno: </b>@item.DatumPorudzbine.ToString("dd/MM/yyyy")</p>
+
+                        @if (item.StatusPorudzbine == StatusPorudzbine.Aktivna)
+                        {
+                            <p style="color: #f2a13f"><b style="color: #312F2F">Status: </b> @item.StatusPorudzbine.ToString().ToUpper()</p>
+                        }
+                        @if (item.StatusPorudzbine == StatusPorudzbine.Izvrsena)
+                        {
+                            <p style="color: #7ced6d"><b style="color: #312F2F">Status: </b> @item.StatusPorudzbine.ToString().ToUpper()</p>
+                        }
+                        @if (item.StatusPorudzbine == StatusPorudzbine.Otkazana)
+                        {
+                            <p style="color: #eb4b60"><b style="color: #312F2F">Status: </b> @item.StatusPorudzbine.ToString().ToUpper()</p>
+                        }
+
+                        <div>
+                            <form action="/Proizvod/DetaljniPrikaz" style="margin-bottom: 5px;">
+                                <input type="text" value="@ViewBag.Korisnik.KorisnickoIme" name="korisnickoIme" hidden />
+                                <input type="text" value="@item.Proizvod.Id" name="id" hidden />
+                                <input type="submit" value="Detalji" />
+                            </form>
+                        </div>
+
+                        @if (ViewBag.Korisnik.Uloga == Uloga.Kupac)
+                        {
+                            if (item.StatusPorudzbine == StatusPorudzbine.Aktivna)
+                            {
+                                <form action="/Porudzbina/Izvrsi" style="margin-bottom: 5px;">
+                                    <input type="text" value="@item.Kupac.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="text" value="@item.Proizvod.Id" name="id" hidden="hidden" />
+                                    <input type="submit" value="Izvrsi" />
+                                </form>
+                            }
+                            if (item.StatusPorudzbine == StatusPorudzbine.Izvrsena)
+                            {
+                                <form action="/Recenzija/Recenzija">
+                                    <input type="text" value="@item.Kupac.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="text" value="@item.Proizvod.Id" name="id" hidden="hidden" />
+                                    <input type="submit" value="Dodaj recenziju" />
+                                </form>
+                            }
+                            if (item.StatusPorudzbine == StatusPorudzbine.Otkazana)
+                            {
+
+                            }
+                        }
+                        else if (ViewBag.Korisnik.Uloga == Uloga.Administrator)
+                        {
+                            if (item.StatusPorudzbine == StatusPorudzbine.Aktivna)
+                            {
+                                <form action="/Porudzbina/Izvrsi" style="margin-bottom: 5px;">
+                                    <input type="text" value="@item.Kupac.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="text" value="@item.Proizvod.Id" name="id" hidden="hidden" />
+                                    <input type="submit" value="Izvrsi" />
+                                </form>
+                                <form action="/Porudzbina/Otkazi">
+                                    <input type="text" value="@item.Kupac.KorisnickoIme" name="korisnickoIme" hidden="hidden" />
+                                    <input type="text" value="@item.Proizvod.Id" name="id" hidden="hidden" />
+                                    <input type="submit" value="Otkazi" />
+                                </form>
+                            }
+                            if (item.StatusPorudzbine == StatusPorudzbine.Izvrsena)
+                            {
+
+                            }
+                            if (item.StatusPorudzbine == StatusPorudzbine.Otkazana)
+                            {
+
+                            }
+                        }
+                    </div>
+                </div>
+
+
+            }
+        </div>
+        <div class="greske">
+            @if (TempData["recenzijaPostoji"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["recenzijaPostoji"]</div></div>
+            } 
+            @if (TempData["nemaPorudzbina"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["nemaPorudzbina"]</div></div>
+            }
+
+        </div>
+    }
+</body>
+</html>

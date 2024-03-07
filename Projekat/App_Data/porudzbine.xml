@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<ArrayOfPorudzbina xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Porudzbina>
+    <Id>Marko1:2</Id>
+    <Proizvod>
+      <Id>2</Id>
+      <Naziv>Elektricna gitara</Naziv>
+      <Cena>51990</Cena>
+      <Kolicina>8</Kolicina>
+      <Opis>Ibanez RGA42FM-DEF električna gitara iz RG serije Ibaneza,  obožavane širom sveta.  Svirljivost, čvrsta konstrukcija, i odličan ton,  u najboljoj tradicijiji matične kuće.  Trup od meranti drveta, sa elegantnim  zaobljenim top-om od rebrastog javora. Wizard III vrat od javora, male debljine,   i sa udobnim profilom tipičnim za sve RG modele. Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu. Profesionalne performanse, hobi cena,  Ibanez RGA42FM-DEF nudi sve.  Topla preporuka za sve koji traže instrument 21. veka.</Opis>
+      <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-02</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Aktivna</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Marko1:3</Id>
+    <Proizvod>
+      <Id>3</Id>
+      <Naziv>Bas gitara</Naziv>
+      <Cena>26590</Cena>
+      <Kolicina>9</Kolicina>
+      <Opis>Ibanez GSR180 4-žičani Soundgear bas odlikuje vrat sa tanjim češljićem nego  kod tradicionalnih basova i lagano, balansirano,  udobno-konturisano Nato  telo za vrhunsku sviračku udobnost. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Opis>
+      <PutanjaDoSlike>BasGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Marko1:3</Id>
+          <Naslov>Recenzija bas gitara</Naslov>
+          <Sadrzaj>Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:3</Id>
+          <Naslov>bas gitara recenzija</Naslov>
+          <Sadrzaj> Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Mika7:3</Id>
+          <Naslov>recenzijaa</Naslov>
+          <Sadrzaj>Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu</Sadrzaj>
+          <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Marko1:4</Id>
+    <Proizvod>
+      <Id>4</Id>
+      <Naziv>Klarinet</Naziv>
+      <Cena>193400</Cena>
+      <Kolicina>2</Kolicina>
+      <Opis>Buffet Crampon E13 Bb klarinet 17/5 je legendarni klarinet koje se nije  promenio već 40 godina.   Napravljen od najboljeg i odabranog Mozabičkog grenadila drveta i  sklopljen u orginalnoj fabrici u Francuskoj,  ovaj klarinet ima osobine  profesionalnog klarineta: Posrebrene klapne i delovi, plave nerdjajuće opruge  i mnogo toga još.   Kožni padovi od 2015 godine su isti kao na Robert Carree čuvenom RC klarinetu iz  porodice Buffet.</Opis>
+      <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Otkazana</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Zika6:5</Id>
+    <Proizvod>
+      <Id>5</Id>
+      <Naziv>Saksofon</Naziv>
+      <Cena>66000</Cena>
+      <Kolicina>11</Kolicina>
+      <Opis>Flight FTS-200 je školski tenor saksofon dobrog odaziva i uravnoteženog tona.  Telo i mehanizam su izrađene od kvalitetnog  lakiranog mesinga, sadrži visoku  F# klapnu i "thumb rest" za palac. Dolazi u setu sa čvrstim koferom i usnikom. Ovaj model se preporučuje za muzičku školu kao i hobi svirače.</Opis>
+      <PutanjaDoSlike>Saksofon.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Beograd</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Zika6:5</Id>
+          <Naslov>Recenzja saksofon </Naslov>
+          <Sadrzaj>Dolazi u setu sa čvrstim koferom i usnikom. Ovaj model se preporučuje za muzičku školu kao i hobi svirače.</Sadrzaj>
+          <PutanjaDoSlike>Klavir.jpg</PutanjaDoSlike>
+          <Odobrena>false</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Zika6:6</Id>
+    <Proizvod>
+      <Id>6</Id>
+      <Naziv>Ukulele</Naziv>
+      <Cena>5900</Cena>
+      <Kolicina>29</Kolicina>
+      <Opis>Sopran ukulele sa prednjom plocom od punog drveta smreke. 17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Opis>
+      <PutanjaDoSlike>Ukulele.png</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-01</DatumPostavljanja>
+      <Grad>Kragujevac</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Zika6:6</Id>
+          <Naslov>Recenzija ukulele</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:6</Id>
+          <Naslov>Ukulele recenzija</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Saksofon.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Zika6:2</Id>
+    <Proizvod>
+      <Id>2</Id>
+      <Naziv>Elektricna gitara</Naziv>
+      <Cena>51990</Cena>
+      <Kolicina>8</Kolicina>
+      <Opis>Ibanez RGA42FM-DEF električna gitara iz RG serije Ibaneza,  obožavane širom sveta.  Svirljivost, čvrsta konstrukcija, i odličan ton,  u najboljoj tradicijiji matične kuće.  Trup od meranti drveta, sa elegantnim  zaobljenim top-om od rebrastog javora. Wizard III vrat od javora, male debljine,   i sa udobnim profilom tipičnim za sve RG modele. Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu. Profesionalne performanse, hobi cena,  Ibanez RGA42FM-DEF nudi sve.  Topla preporuka za sve koji traže instrument 21. veka.</Opis>
+      <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-02</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Zika6:7</Id>
+    <Proizvod>
+      <Id>7</Id>
+      <Naziv>Violina</Naziv>
+      <Cena>36990</Cena>
+      <Kolicina>20</Kolicina>
+      <Opis>Hora Student je naša preporuka violine za početnike i za đake.  Gornja ploča je od smreke, dok su leđa, vrat i strane od javora.   Napravljena u najvećoj fabrici akustičnih instrumenata u Evropi,  proizvođač Hora (Regin, Rumunija).</Opis>
+      <PutanjaDoSlike>Violina.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Beograd</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Otkazana</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Maja8:6</Id>
+    <Proizvod>
+      <Id>6</Id>
+      <Naziv>Ukulele</Naziv>
+      <Cena>5900</Cena>
+      <Kolicina>29</Kolicina>
+      <Opis>Sopran ukulele sa prednjom plocom od punog drveta smreke. 17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Opis>
+      <PutanjaDoSlike>Ukulele.png</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-01</DatumPostavljanja>
+      <Grad>Kragujevac</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Zika6:6</Id>
+          <Naslov>Recenzija ukulele</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:6</Id>
+          <Naslov>Ukulele recenzija</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Saksofon.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Maja8:3</Id>
+    <Proizvod>
+      <Id>3</Id>
+      <Naziv>Bas gitara</Naziv>
+      <Cena>26590</Cena>
+      <Kolicina>9</Kolicina>
+      <Opis>Ibanez GSR180 4-žičani Soundgear bas odlikuje vrat sa tanjim češljićem nego  kod tradicionalnih basova i lagano, balansirano,  udobno-konturisano Nato  telo za vrhunsku sviračku udobnost. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Opis>
+      <PutanjaDoSlike>BasGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Marko1:3</Id>
+          <Naslov>Recenzija bas gitara</Naslov>
+          <Sadrzaj>Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:3</Id>
+          <Naslov>bas gitara recenzija</Naslov>
+          <Sadrzaj> Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Mika7:3</Id>
+          <Naslov>recenzijaa</Naslov>
+          <Sadrzaj>Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu</Sadrzaj>
+          <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Maja8:4</Id>
+    <Proizvod>
+      <Id>4</Id>
+      <Naziv>Klarinet</Naziv>
+      <Cena>193400</Cena>
+      <Kolicina>2</Kolicina>
+      <Opis>Buffet Crampon E13 Bb klarinet 17/5 je legendarni klarinet koje se nije  promenio već 40 godina.   Napravljen od najboljeg i odabranog Mozabičkog grenadila drveta i  sklopljen u orginalnoj fabrici u Francuskoj,  ovaj klarinet ima osobine  profesionalnog klarineta: Posrebrene klapne i delovi, plave nerdjajuće opruge  i mnogo toga još.   Kožni padovi od 2015 godine su isti kao na Robert Carree čuvenom RC klarinetu iz  porodice Buffet.</Opis>
+      <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Aktivna</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Maja8:8</Id>
+    <Proizvod>
+      <Id>8</Id>
+      <Naziv>Kontrabas</Naziv>
+      <Cena>209900</Cena>
+      <Kolicina>8</Kolicina>
+      <Opis>Hora kontrabas B110 veličine 3/4 sa prednjom pločom od punog drveta smreke.</Opis>
+      <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-01</DatumPostavljanja>
+      <Grad>Kragujevac</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Aktivna</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Maja8:1</Id>
+    <Proizvod>
+      <Id>1</Id>
+      <Naziv>Akusticna Gitara</Naziv>
+      <Cena>109989</Cena>
+      <Kolicina>2</Kolicina>
+      <Opis>Predstavljamo novi i poboljšani EXCEL GRAMERCY. Već poznat po izvanrednoj svirljivosti sa svojim uglađenim oblikom tela i udobnim,   satenskim profilom tankog C vrata.  EXCEL GRAMERCY sada ima gornju ploču od pune smreke, dok stranice i leđa dolaze od punog mahagonija za   savršen balans svetle artikulacije i potpuno čvrste topline . Za pojačanje bogatog tona, svi modeli iz Excel  serije sada imaju sistem pretpojačala  Fishman Sonitone, sa elegantnim postavljanjem jedne kontrole jačine zvuka  i tona unutar zvučnog otvora. Elegantni ukrasi uključuju male dijamantske  umetke od sedefa na grifplatni koja je od ebanovine,  kao i novi Scroll Style Throwback oblik glave.</Opis>
+      <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Beograd</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Mika7:1</Id>
+          <Naslov>recezija</Naslov>
+          <Sadrzaj>. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>Violoncelo.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Otkazana</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:3</Id>
+    <Proizvod>
+      <Id>3</Id>
+      <Naziv>Bas gitara</Naziv>
+      <Cena>26590</Cena>
+      <Kolicina>9</Kolicina>
+      <Opis>Ibanez GSR180 4-žičani Soundgear bas odlikuje vrat sa tanjim češljićem nego  kod tradicionalnih basova i lagano, balansirano,  udobno-konturisano Nato  telo za vrhunsku sviračku udobnost. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Opis>
+      <PutanjaDoSlike>BasGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Marko1:3</Id>
+          <Naslov>Recenzija bas gitara</Naslov>
+          <Sadrzaj>Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:3</Id>
+          <Naslov>bas gitara recenzija</Naslov>
+          <Sadrzaj> Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Mika7:3</Id>
+          <Naslov>recenzijaa</Naslov>
+          <Sadrzaj>Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu</Sadrzaj>
+          <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:4</Id>
+    <Proizvod>
+      <Id>4</Id>
+      <Naziv>Klarinet</Naziv>
+      <Cena>193400</Cena>
+      <Kolicina>2</Kolicina>
+      <Opis>Buffet Crampon E13 Bb klarinet 17/5 je legendarni klarinet koje se nije  promenio već 40 godina.   Napravljen od najboljeg i odabranog Mozabičkog grenadila drveta i  sklopljen u orginalnoj fabrici u Francuskoj,  ovaj klarinet ima osobine  profesionalnog klarineta: Posrebrene klapne i delovi, plave nerdjajuće opruge  i mnogo toga još.   Kožni padovi od 2015 godine su isti kao na Robert Carree čuvenom RC klarinetu iz  porodice Buffet.</Opis>
+      <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:6</Id>
+    <Proizvod>
+      <Id>6</Id>
+      <Naziv>Ukulele</Naziv>
+      <Cena>5900</Cena>
+      <Kolicina>29</Kolicina>
+      <Opis>Sopran ukulele sa prednjom plocom od punog drveta smreke. 17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Opis>
+      <PutanjaDoSlike>Ukulele.png</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-01</DatumPostavljanja>
+      <Grad>Kragujevac</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Zika6:6</Id>
+          <Naslov>Recenzija ukulele</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+        <Recenzija>
+          <Id>Maja8:6</Id>
+          <Naslov>Ukulele recenzija</Naslov>
+          <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+          <PutanjaDoSlike>Saksofon.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:7</Id>
+    <Proizvod>
+      <Id>7</Id>
+      <Naziv>Violina</Naziv>
+      <Cena>36990</Cena>
+      <Kolicina>20</Kolicina>
+      <Opis>Hora Student je naša preporuka violine za početnike i za đake.  Gornja ploča je od smreke, dok su leđa, vrat i strane od javora.   Napravljena u najvećoj fabrici akustičnih instrumenata u Evropi,  proizvođač Hora (Regin, Rumunija).</Opis>
+      <PutanjaDoSlike>Violina.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Beograd</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Aktivna</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:9</Id>
+    <Proizvod>
+      <Id>9</Id>
+      <Naziv>Violoncelo</Naziv>
+      <Cena>49990</Cena>
+      <Kolicina>13</Kolicina>
+      <Opis>AMADEUS CA-101 3/4 školski model tročetvrtinskog violončela sa topom od smreke,  leđa i stranice od javora. Ovaj model dolazi sa fajnštimerima, kalafonijumom,  gudalom i platnenom torbom sa naramenicama. Mat finiš.</Opis>
+      <PutanjaDoSlike>Violoncelo.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Novi Sad</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:8</Id>
+    <Proizvod>
+      <Id>8</Id>
+      <Naziv>Kontrabas</Naziv>
+      <Cena>209900</Cena>
+      <Kolicina>8</Kolicina>
+      <Opis>Hora kontrabas B110 veličine 3/4 sa prednjom pločom od punog drveta smreke.</Opis>
+      <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-01</DatumPostavljanja>
+      <Grad>Kragujevac</Grad>
+      <ListaRecenzija />
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+  <Porudzbina>
+    <Id>Mika7:1</Id>
+    <Proizvod>
+      <Id>1</Id>
+      <Naziv>Akusticna Gitara</Naziv>
+      <Cena>109989</Cena>
+      <Kolicina>2</Kolicina>
+      <Opis>Predstavljamo novi i poboljšani EXCEL GRAMERCY. Već poznat po izvanrednoj svirljivosti sa svojim uglađenim oblikom tela i udobnim,   satenskim profilom tankog C vrata.  EXCEL GRAMERCY sada ima gornju ploču od pune smreke, dok stranice i leđa dolaze od punog mahagonija za   savršen balans svetle artikulacije i potpuno čvrste topline . Za pojačanje bogatog tona, svi modeli iz Excel  serije sada imaju sistem pretpojačala  Fishman Sonitone, sa elegantnim postavljanjem jedne kontrole jačine zvuka  i tona unutar zvučnog otvora. Elegantni ukrasi uključuju male dijamantske  umetke od sedefa na grifplatni koja je od ebanovine,  kao i novi Scroll Style Throwback oblik glave.</Opis>
+      <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+      <DatumPostavljanja>2023-07-03</DatumPostavljanja>
+      <Grad>Beograd</Grad>
+      <ListaRecenzija>
+        <Recenzija>
+          <Id>Mika7:1</Id>
+          <Naslov>recezija</Naslov>
+          <Sadrzaj>. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+          <PutanjaDoSlike>Violoncelo.jpg</PutanjaDoSlike>
+          <Odobrena>true</Odobrena>
+          <Obrisana>false</Obrisana>
+        </Recenzija>
+      </ListaRecenzija>
+      <Dostupan>true</Dostupan>
+      <Obrisan>false</Obrisan>
+    </Proizvod>
+    <Kolicina>1</Kolicina>
+    <DatumPorudzbine>2023-07-03</DatumPorudzbine>
+    <StatusPorudzbine>Izvrsena</StatusPorudzbine>
+    <Obrisana>false</Obrisana>
+  </Porudzbina>
+</ArrayOfPorudzbina>

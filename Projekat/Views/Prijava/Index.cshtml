@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Prijava/Index">
+                <input type="submit" value="Prijava" />
+            </form>
+            <form action="/Registracija/Index">
+                <input type="submit" value="Registracija" />
+            </form>
+        </div>
+    </div>
+
+
+    @if (TempData["greska"] != null)
+    {
+        <div class="kontejner-greska-login"><div>@TempData["greska"]</div></div>
+
+    }
+    <div class="kontejner">
+        <form action="~/Prijava/Prijava" method="post" class="kontejner-forma-login">
+
+            <div class="forma-login-inputs">
+                <label>Korisnicko ime:</label>
+                <input type="text" name="korisnickoIme" required />
+                <label>Lozinka:</label>
+                <input type="password" name="lozinka" required />
+                <input type="submit" name="prijava" value="Prijava" />
+            </div>
+
+        </form>
+
+
+    </div>
+</body>
+</html>

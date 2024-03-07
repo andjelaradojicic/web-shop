@@ -1,0 +1,179 @@
+﻿@{
+    Layout = null;
+}
+@using Projekat.Models
+@model  IEnumerable<Proizvod>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Veb prodavnica</title>
+        <link rel="stylesheet" href="~/Content/stil.css">
+    </head>
+    <body>
+        <div class="navigacija">
+            <div class="navigacija-levo">
+                <form action="~/Home/Index">
+                    <input type="submit" value="Pocetna" />
+                </form>
+            </div>
+            <div class="navigacija-desno">
+                <form action="/Korisnik/Pregled">
+                    <input type="submit" value="Profil" />
+                </form>
+                <form action="/Prijava/Odjava">
+                    <input type="submit" value="Odjava" />
+                </form>
+            </div>
+        </div>
+        @if (Model != null)
+        {
+            if (ViewBag.Korisnik.Uloga == Uloga.Administrator || ViewBag.Korisnik.Uloga == Uloga.Prodavac)
+            {
+                <div class="filter-form-div">
+                    Proizvodi:
+                    <form action="/Proizvod/PretragaPoStatusu" class="filter">
+                        <div class="filter-polja">
+                            <label>Dostupni</label>
+                            <input type="radio" name="pretragaPoStatusu" value="dostupni" />
+                            <label>Nedostupni</label>
+                            <input type="radio" name="pretragaPoStatusu" value="nedostupni" />
+                        </div>
+                        <div class="filter-submit">
+                            <input type="submit" value="Pretrazi" />
+                        </div>
+                    </form>
+                </div>
+            }
+
+            <div class="proizvodi-kontejner">
+
+                @if (ViewBag.Korisnik.Uloga == Uloga.Administrator || ViewBag.Korisnik.Uloga == Uloga.Prodavac)
+                {
+                    <div class="sortiranje">
+                        <h4>Soritranje</h4>
+
+                        <div>
+
+                            <form action="/Proizvod/SortirajPoNazivu" class="sortiranje-forma">
+                                <h4>Sortiranje po nazivu</h4>
+                                <div style="display: flex; align-items: center">
+                                    <label>Opadajuce</label>
+                                    <input type="radio" name="sortiranjePoNazivu" value="opadajuce" />
+
+                                    <label>Rastuce</label>
+                                    <input type="radio" name="sortiranjePoNazivu" value="rastuce" />
+                                </div>
+                                <input type="submit" value="Sortiraj" />
+
+                            </form>
+                        </div>
+
+                        <div>
+
+                            <form action="/Proizvod/SortirajPoCeni" class="sortiranje-forma">
+                                <h4>Sortiranje po ceni</h4>
+                                <div style="display: flex; align-items: center">
+                                    <label>Opadajuce</label>
+                                    <input type="radio" name="sortiranjePoCeni" value="opadajuce" />
+
+                                    <label>Rastuce</label>
+                                    <input type="radio" name="sortiranjePoCeni" value="rastuce" />
+                                </div>
+                                <input type="submit" value="Sortiraj" />
+
+                            </form>
+                        </div>
+
+                        <div>
+
+                            <form action="/Proizvod/SortirajPoDatumu" class="sortiranje-forma">
+                                <h4>Sortiranje po datumu</h4>
+                                <div style="display: flex; align-items: center">
+                                    <label>Opadajuce</label>
+                                    <input type="radio" name="sortiranjePoDatumu" value="opadajuce" />
+
+                                    <label>Rastuce</label>
+                                    <input type="radio" name="sortiranjePoDatumu" value="rastuce" />
+                                </div>
+                                <input type="submit" value="Sortiraj" />
+
+                            </form>
+                        </div>
+                    </div>
+                }
+                <div class="proizvodi">
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="kartica">
+                            <img src="~/Images/@item.PutanjaDoSlike" style="width:200px; height:200px" />
+                            <div class="tekstKartice">
+                                <p><b>Proizvod: </b>@item.Naziv</p>
+                                <p><b>Cena: </b>@item.Cena</p>
+                                <p><b>Kolicina: </b>@item.Kolicina</p>
+                                <p><b>Postavljen: </b>@item.DatumPostavljanja.ToString("dd/MM/yyyy")</p>
+                                <p><b>Lokacija: </b>@item.Grad</p>
+
+                                @if (item.Dostupan)
+                                {
+                                    <p><b>Dostupan: </b>da</p>
+                                }
+                                else
+                                {
+                                    <p><b>Dostupan: </b>ne</p>
+                                }
+
+                                <div>
+                                    <form action="/Proizvod/DetaljniPrikaz" style="margin-top: 5px; margin-bottom: 5px">
+                                        <input type="text" value="@ViewBag.Korisnik.KorisnickoIme" name="korisnickoIme" hidden />
+                                        <input type="text" value="@item.Id" name="id" hidden />
+                                        <input type="submit" value="Detalji" />
+                                    </form>
+                                </div>
+
+                                @if (ViewBag.Korisnik.Uloga == Uloga.Prodavac || ViewBag.Korisnik.Uloga == Uloga.Administrator)
+                                {
+                                    <div>
+                                        <form action="/Proizvod/Izmena" style="margin-top: 5px; margin-bottom: 5px">
+                                            <input type="text" value="@ViewBag.Korisnik.KorisnickoIme" name="korisnickoIme" hidden />
+                                            <input type="text" value="@item.Id" name="id" hidden />
+                                            <input type="submit" value="Izmeni" />
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <form action="/Proizvod/Obrisi" style="margin-top: 5px; margin-bottom: 5px">
+                                            <input type="text" value="@ViewBag.Korisnik.KorisnickoIme" name="korisnickoIme" hidden />
+                                            <input type="text" value="@item.Id" name="id" hidden />
+                                            <input type="submit" value="Obrisi" />
+                                        </form>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+
+            </div>
+        }
+
+        <div class="greske">
+            @if (TempData["praznaLista"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["praznaLista"]</div></div>
+            }
+            @if (TempData["nemaproizvoda"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["nemaproizvoda"]</div></div>
+            }
+            @if (TempData["nemaProizvoda1"] != null)
+            {
+                <div class="kontejner-greska"><div>@TempData["nemaProizvoda1"]</div></div>
+            }
+        </div>
+        
+    </body>
+</html>
+

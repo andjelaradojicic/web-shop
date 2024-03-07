@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ArrayOfRecenzija xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recenzija>
+    <Id>Marko1:3</Id>
+    <Naslov>Recenzija bas gitara</Naslov>
+    <Sadrzaj>Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+    <PutanjaDoSlike>ElektricnaGitara.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Zika6:5</Id>
+    <Naslov>Recenzja saksofon </Naslov>
+    <Sadrzaj>Dolazi u setu sa čvrstim koferom i usnikom. Ovaj model se preporučuje za muzičku školu kao i hobi svirače.</Sadrzaj>
+    <PutanjaDoSlike>Klavir.jpg</PutanjaDoSlike>
+    <Odobrena>false</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Zika6:6</Id>
+    <Naslov>Recenzija ukulele</Naslov>
+    <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+    <PutanjaDoSlike>Kontrabas.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Maja8:6</Id>
+    <Naslov>Ukulele recenzija</Naslov>
+    <Sadrzaj>17 pragova,   duzina skale 33 cm. Lepog izgleda i sjajnog zvuka.</Sadrzaj>
+    <PutanjaDoSlike>Saksofon.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Maja8:3</Id>
+    <Naslov>bas gitara recenzija</Naslov>
+    <Sadrzaj> Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+    <PutanjaDoSlike>AkusticnaGitara.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Mika7:3</Id>
+    <Naslov>recenzijaa</Naslov>
+    <Sadrzaj>Kombinovan sa 24 jumbo praga,  daje gitaru koja se gotovo sama svira.  Ugrađena dva Quantum pasivna humbucker  magneta, sa auto-split funkcijom, pogodna za sve žanrove.  Standardne Ibanez čivije,  i fiksna kobilica daju maksimalnu stabilnost štima,  i odličan sustain. Vrlo atraktivan, savršeno izbalansiran, i svestran instrument,   bez prave konkurencije na tržištu</Sadrzaj>
+    <PutanjaDoSlike>Klarinet.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Mika7:1</Id>
+    <Naslov>recezija</Naslov>
+    <Sadrzaj>. Ibanez GSR180 bas gitara je opremljena  sa dva Ibanez Standard J pickup-a i  poseduje odvojene volume kontrole i  jedinstvenu ton kontrolu.</Sadrzaj>
+    <PutanjaDoSlike>Violoncelo.jpg</PutanjaDoSlike>
+    <Odobrena>true</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+  <Recenzija>
+    <Id>Mika7:8</Id>
+    <Naslov>recenzija</Naslov>
+    <Sadrzaj>Buffet Crampon E13 Bb klarinet 17/5 je legendarni klarinet koje se nije  promenio već 40 godina.   Napravljen od najboljeg i odabranog Mozabičkog grenadila drveta i  sklopljen u orginalnoj fabrici u Francuskoj,  ovaj klarinet ima osobine  profesionalnog klarineta: Posrebrene klapne i delovi, plave nerdjajuće opruge  i mnogo toga još.   Kožni padovi od 2015 godine su isti kao na Robert Carree čuvenom RC klarinetu iz</Sadrzaj>
+    <PutanjaDoSlike>Klavir.jpg</PutanjaDoSlike>
+    <Odobrena>false</Odobrena>
+    <Obrisana>false</Obrisana>
+  </Recenzija>
+</ArrayOfRecenzija>

@@ -1,0 +1,156 @@
+﻿@{
+    Layout = null;
+}
+
+
+@using Projekat.Models
+@model  Korisnik
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+        <h4>Pregled profila</h4>
+        <div class="kontejner-profil-pregled">
+            <div class="podaci-korisnik">
+                <table>
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Korisnicko ime:</b></label></td>
+                        <td><label>@Model.KorisnickoIme</label></td>
+                    </tr>
+
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Ime:</b></label></td>
+                        <td><label>@Model.Ime</label></td>
+                    </tr>
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Prezime:</b></label></td>
+                        <td><label>@Model.Prezime</label></td>
+                    </tr>
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Pol:</b></label></td>
+                        <td><label>@Model.Pol</label></td>
+                    </tr>
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Datum rodjenja:</b></label></td>
+                        <td><label>@Model.DatumRodjenja.ToString("dd/MM/yyyy")</label></td>
+                    </tr>
+                    <tr class="korisnik-tabela">
+                        <td><label><b>Uloga:</b></label></td>
+                        <td><label>@Model.Uloga</label></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="opcije-korisnik">
+
+                @if (ViewBag.Korisnik.Uloga == Uloga.Administrator)
+                {
+
+                    if (ViewBag.Korisnik.KorisnickoIme == Model.KorisnickoIme)
+                    {
+                        <div>
+                            <form action="~/Korisnik/IzmenaProfila">
+                                <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                                <input type="submit" value="Izmeni profil" />
+                            </form>
+                        </div>
+                        <div>
+                            <form action="~/Korisnik/Dodaj">
+                                <input type="submit" value="Dodaj prodavca" />
+                            </form>
+                        </div>
+                        <div>
+                            <form action="~/Korisnik/ListaKorisnika">
+                                <input type="submit" value="Lista korisnika" />
+                            </form>
+                        </div>
+                        <div>
+                            <form action="~/Proizvod/ListaProizvoda">
+                                <input type="submit" value="Lista proizvoda" />
+                            </form>
+                        </div>
+
+                        <div>
+                            <form action="~/Porudzbina/ListaPorudzbina">
+                                <input type="submit" value="Lista porudzbina" />
+                            </form>
+                        </div>
+                    }
+                }
+                else if (ViewBag.Korisnik.Uloga == Uloga.Kupac)
+                {
+                    <div>
+                        <form action="~/Korisnik/IzmenaProfila">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Izmeni profil" />
+                        </form>
+                    </div>
+                    <div>
+                        <form action="~/Proizvod/ListaOmiljenihProizvoda">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Omiljeni proizvodi" />
+                        </form>
+                    </div>
+                    <div>
+                        <form action="~/Porudzbina/ListaPorucenihProizvoda">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Poruceni proizvodi" />
+                        </form>
+                    </div>
+                }
+                else if (ViewBag.Korisnik.Uloga == Uloga.Prodavac)
+                {
+                    <div>
+                        <form action="~/Korisnik/IzmenaProfila">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Izmeni profil" />
+                        </form>
+                    </div>
+                    <div>
+                        <form action="~/Proizvod/Dodaj">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Dodaj Proizvod" />
+                        </form>
+                    </div>
+                    <div>
+                        <form action="~/Proizvod/ListaObjavljenihProizvoda">
+                            <input type="text" name="korisnickoIme" value="@Model.KorisnickoIme" hidden="hidden" />
+                            <input type="submit" value="Objavljeni proizvodi" />
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="greske">
+            @if (TempData["izmenaKorisnika"] != null)
+            {
+                <div class="kontejner-greska"><div style="background-color: #7ced6d">@TempData["izmenaKorisnika"]</div></div>
+            }
+        </div>
+
+        
+    }
+</body>
+  </html>

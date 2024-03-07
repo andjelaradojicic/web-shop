@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veb prodavnica</title>
+    <link rel="stylesheet" href="~/Content/stil.css">
+</head>
+<body>
+    <div class="navigacija">
+
+        <div class="navigacija-levo">
+            <form action="~/Home/Index">
+                <input type="submit" value="Pocetna" />
+            </form>
+        </div>
+        <div class="navigacija-desno">
+            <form action="/Korisnik/Pregled">
+                <input type="submit" value="Profil" />
+            </form>
+            <form action="/Prijava/Odjava">
+                <input type="submit" value="Odjava" />
+            </form>
+        </div>
+    </div>
+    @if (TempData["korisnikVecPostoji"] != null)
+    {
+        <div class="kontejner-greska-login"><div>Korisnik vec postoji</div></div>
+
+    }
+    <div class="kontejner">
+
+
+
+        <form action="~/Korisnik/DodajProdavca" method="post" class="kontejner-forma-login">
+            <h4>Dodaj prodavca</h4>
+            <div class="forma-login-inputs">
+                <label>Korisnicko ime:</label>
+                <input type="text" name="korisnickoIme" required />
+
+                <label>Lozinka:</label>
+                <input type="password" name="lozinka" required />
+
+                <label>Ime:</label>
+                <input type="text" name="ime" required />
+
+                <label>Prezime:</label>
+                <input type="text" name="prezime" required />
+
+                <label>Pol:</label>
+                <select name="pol">
+                    <option value="Muski">Muski</option>
+                    <option value="Zenski">Zenski</option>
+                </select>
+
+                <label>Email:</label>
+                <input type="email" name="email" />
+
+                <label>Datum rodjenja:</label>
+                <input type="date" name="datumRodjenja" required />
+
+
+                <label hidden>Uloga:</label>
+                <select name="uloga" hidden>
+                    <option>Prodavac</option>
+                </select>
+
+                <input type="submit" value="Dodaj prodavca" />
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
